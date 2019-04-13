@@ -10,22 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Assignment_2
 {
-    public partial class MainWindow : Window
+    /// <summary>
+    /// Interaction logic for PhoneBook.xaml
+    /// </summary>
+    public partial class PhoneBook : Window
     {
-        //this.showWindow = Properties.Settings.Default.;
-        public MainWindow()
+        public PhoneBook()
         {
             InitializeComponent();
         }
 
-        private void Login_btn_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

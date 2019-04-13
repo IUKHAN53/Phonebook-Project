@@ -5,8 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Assignment_2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="528.474" Width="408.856">
+    <Grid HorizontalAlignment="Left" Width="405" Height="501" VerticalAlignment="Top">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <GradientStop Color="#FF443535" Offset="0.932"/>
+                <GradientStop Color="White" Offset="0.361"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button x:Name="login_btn" Content="Button" HorizontalAlignment="Left" Margin="147,366,0,0" VerticalAlignment="Top" Width="92" Height="45" Background="{x:Null}" BorderBrush="#FF2B1A1A" FontSize="24" FontWeight="Bold" Click="Login_btn_Click">
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0.458"/>
+                    <GradientStop Color="#FF9C6969" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+        </Button>
+        <TextBox x:Name="user_phone" HorizontalAlignment="Left" Height="43" Margin="91,208,0,0" TextWrapping="Wrap" Text="Phone Number" VerticalAlignment="Top" Width="219" FontSize="18" BorderBrush="{x:Null}" Foreground="#FF807C7C"/>
+        <Label Content="Login" HorizontalAlignment="Left" Margin="154,139,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.563,3.332" Height="47" Width="87" Background="White" FontSize="28" FontFamily="Segoe UI Emoji">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FFEE7070" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <PasswordBox x:Name="user_pass" HorizontalAlignment="Left" Margin="91,290,0,0" VerticalAlignment="Top" Width="219" Height="42" BorderBrush="{x:Null}" Password="Password" IsEnabled="False" FontSize="18" Foreground="#FF5D5757"/>
     </Grid>
 </Window>
