@@ -7,19 +7,27 @@ using System.Threading.Tasks;
 
 namespace Assignment_2
 {
-    class contact
+    class contacts
     {
-        string f_name { get; set; }
-        string l_name { get; set; }
-        string phone { get; set; }
+        public string f_name { get; set; }
+        public string l_name { get; set; }
+        public string phone { get; set; }
         FileStream photo { get; set; }
         string company { get; set; }
         string job { get; set; }
         string email { get; set; }
         string address { get; set; }
-        public contact(string fname,string lname,string phone,string company,string job,string email,string address,FileStream image)
+        public List<contacts> cList = new List<contacts>();
+        public contacts(string fname,string lname,string phone,string company,string job,string email,string address,FileStream image)
         {
 
         }
+        public contacts(string fname, string lname, string phone)
+        {
+            this.f_name = fname;
+            this.l_name = lname;
+            this.phone = phone;
+        }
+        public contacts() { }
     }
 }

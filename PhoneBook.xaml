@@ -6,5 +6,29 @@
         xmlns:local="clr-namespace:Assignment_2"
         mc:Ignorable="d"
         Title="PhoneBook" Height="422.837" Width="307.445">
-    <Grid Margin="0,0,2,-2"/>
+    <Grid Margin="0,0,2,-2">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="White" Offset="0"/>
+                <GradientStop Color="#FF0F0E0E" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBox x:Name="search" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="Search Contacts" VerticalAlignment="Top" Width="240" Background="{x:Null}" Foreground="#FF131212" BorderBrush="#FFC7AFAF"/>
+        <ListBox x:Name="contacts_list" HorizontalAlignment="Left" Height="346" Margin="10,38,0,0" VerticalAlignment="Top" Width="277" Foreground="#FF362929" Background="{x:Null}" BorderBrush="{x:Null}" ItemTemplate="{DynamicResource cTemplate}">
+            <ListBox.Resources>
+                <DataTemplate x:Key="cTemplate">
+                    <Grid Width="209" Height="57" Background="{x:Null}" ToolTip="{Binding f_name}">
+                        <Image HorizontalAlignment="Left" Height="57" VerticalAlignment="Top" Width="69">
+                            <Image.OpacityMask>
+                                <ImageBrush/>
+                            </Image.OpacityMask>
+                        </Image>
+                        <Label Content="{Binding f_name}" HorizontalAlignment="Left" Margin="73,0,0,0" VerticalAlignment="Top" Height="27" Width="131" FontSize="12"/>
+                        <Label Content="{Binding phone}" HorizontalAlignment="Left" Margin="73,27,0,0" VerticalAlignment="Top" Height="30" Width="131" FontSize="12"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.Resources>
+        </ListBox>
+        <Button x:Name="srch_btn" Content="Search" HorizontalAlignment="Left" Margin="250,10,0,0" VerticalAlignment="Top" Width="42" Height="23" Background="{x:Null}" BorderBrush="#FF9E8C8C" Foreground="#FF3C3737" Click="Button_Click"/>
+    </Grid>
 </Window>
