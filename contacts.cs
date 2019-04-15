@@ -18,16 +18,18 @@ namespace Assignment_2
         string email { get; set; }
         string address { get; set; }
         public List<contacts> cList = new List<contacts>();
-        public contacts(string fname,string lname,string phone,string company,string job,string email,string address,FileStream image)
-        {
-
-        }
-        public contacts(string fname, string lname, string phone)
-        {
-            this.f_name = fname;
-            this.l_name = lname;
-            this.phone = phone;
-        }
         public contacts() { }
+        public bool Add_contact(contacts c)
+        {
+            try
+            {
+                cList.Add(c);
+            }
+            catch
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }

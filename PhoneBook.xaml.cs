@@ -26,46 +26,31 @@ namespace Assignment_2
 
             contacts obj = new contacts();
 
-            obj.cList.Add(new contacts() {
+            obj.Add_contact(new contacts() {
                 f_name = "Suhaib",
                 phone = "031245678"
             });
-            obj.cList.Add(new contacts()
+            obj.Add_contact(new contacts()
             {
                 f_name = "Suhaib",
                 phone = "031245678"
             });
-            obj.cList.Add(new contacts()
+            obj.Add_contact(new contacts()
             {
                 f_name = "Suhaib",
                 phone = "031245678"
             });
-            obj.cList.Add(new contacts()
+            obj.Add_contact(new contacts()
             {
                 f_name = "Suhaib",
                 phone = "031245678"
             });
-            obj.cList.Add(new contacts()
+            obj.Add_contact(new contacts()
             {
                 f_name = "Suhaib",
                 phone = "031245678"
             });
-            obj.cList.Add(new contacts()
-            {
-                f_name = "Suhaib",
-                phone = "031245678"
-            });
-            obj.cList.Add(new contacts()
-            {
-                f_name = "Suhaib",
-                phone = "031245678"
-            });
-            obj.cList.Add(new contacts()
-            {
-                f_name = "Suhaib",
-                phone = "031245678"
-            });
-            obj.cList.Add(new contacts()
+            obj.Add_contact(new contacts()
             {
                 f_name = "Suhaib",
                 phone = "031245678"
