@@ -58,7 +58,15 @@ namespace Assignment_2
             this.contacts_list.ItemsSource = obj.cList;
             
         }
+        //add contact button
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            newContact nc = new newContact();
+            nc.Show();
+            this.Hide();
 
+        }
+        //search button
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
