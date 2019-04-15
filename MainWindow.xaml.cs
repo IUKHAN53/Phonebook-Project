@@ -17,7 +17,7 @@ namespace Assignment_2
 {
     public partial class MainWindow : Window
     {
-        //this.showWindow = Properties.Settings.Default.;
+        //this.showWindow = 
         public MainWindow()
         {
             InitializeComponent();
@@ -25,7 +25,19 @@ namespace Assignment_2
 
         private void Login_btn_Click(object sender, RoutedEventArgs e)
         {
-
+            UserName.Text = Properties.Settings.Default.UserName;
+            string u_name = UserName.Text;
+            string password = pass.Password;
+            if (password.Equals(rpass.Password))
+            {
+                Properties.Settings.Default.UserName = u_name;
+                Properties.Settings.Default.Password = password;
+                Properties.Settings.Default.Save();
+            }
+            else
+            {
+                MessageBox.Show("Password MisMatch ", "Password Error",MessageBoxButton.OK,MessageBoxImage.Error);
+            }
         }
     }
 }

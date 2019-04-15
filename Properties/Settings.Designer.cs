@@ -23,21 +23,27 @@ namespace Assignment_2.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool first_use {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string UserName {
             get {
-                return ((bool)(this["first_use"]));
+                return ((string)(this["UserName"]));
+            }
+            set {
+                this["UserName"] = value;
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Setting {
+        public string Password {
             get {
-                return ((string)(this["Setting"]));
+                return ((string)(this["Password"]));
+            }
+            set {
+                this["Password"] = value;
             }
         }
     }
