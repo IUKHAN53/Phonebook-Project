@@ -46,18 +46,32 @@ namespace Assignment_2
 
         private void Upload_btn_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog fileDialog = new OpenFileDialog
+           OpenFileDialog openFileDialog1 = new OpenFileDialog  
+            {  
+                InitialDirectory = @"C:\",  
+                Title = "Select an image",  
+  
+                CheckFileExists = true,  
+                CheckPathExists = true,  
+  
+                DefaultExt = "jpeg",  
+                Filter = "Images |(*.BMP;*.JPG;*.GIF,*.PNG,*.TIFF)",  
+                FilterIndex = 2,  
+                RestoreDirectory = true,  
+  
+                ReadOnlyChecked = true,  
+                ShowReadOnly = true  
+            };  
+            string rs_path = "C:\\Users\\IUKHAN\\source\\repos\\Visual_Programming\\Resources\\";
+            if(openFileDialog1.ShowDialog() == true)
             {
-                InitialDirectory = @"C:\",
-                Title = "Choose contact Pic",
-                Filter = "Images (*.BMP;*.JPG;*.GIF,*.PNG,*.TIFF)|*.BMP;*.JPG;*.GIF;*.PNG;*.TIFF|",
-                CheckFileExists = true,
-                CheckPathExists = true,
-                DefaultExt = "jpeg",
-            };
-            Nullable<bool> result = fileDialog.ShowDialog();
-            if (result == true)
-            {
+ //           System.IO.File.Copy(openFileDialog1.FileName,rs_path+"asd.jpeg");
+            BitmapImage bi3 = new BitmapImage();
+            bi3.BeginInit();
+            bi3.UriSource = new Uri(rs_path+"asd.jpeg", UriKind.Relative);
+            bi3.EndInit();
+            image_frame.Stretch = Stretch.Fill;            
+            image_frame.Source = bi3;
             }
 
         }
