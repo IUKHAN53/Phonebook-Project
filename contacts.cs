@@ -12,11 +12,11 @@ namespace Assignment_2
         public string f_name { get; set; }
         public string l_name { get; set; }
         public string phone { get; set; }
-        FileStream photo { get; set; }
-        string company { get; set; }
-        string job { get; set; }
-        string email { get; set; }
-        string address { get; set; }
+        public FileStream photo { get; set; }
+        public string company { get; set; }
+        public string job { get; set; }
+        public string email { get; set; }
+        public string address { get; set; }
         public List<contacts> cList = new List<contacts>();
         public contacts() { }
         public bool Add_contact(contacts c)

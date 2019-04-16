@@ -31,16 +31,23 @@ namespace Assignment_2
             string firstName = fname_box.Text;
             string lastName = lname_box.Text;
             string phoneNum = phone_box.Text;
-            string email = email_box.Text;
-            string job = job_box.Text;
+            string email1 = email_box.Text;
+            string comp = comp_box.Text;
+            string job1 = job_box.Text;
             string adress = adrs_box.Text;
 
 
             contacts obj = new contacts();
             obj.Add_contact(new contacts()
             {
-                f_name = "Suhaib",
-                phone = "031245678"
+                f_name = firstName,
+                l_name = lastName,
+                phone = phoneNum,
+                photo = null,
+                company = comp,
+                job = job1,
+                email = email1,
+                address = adress
             });
         }
 
@@ -62,16 +69,9 @@ namespace Assignment_2
                 ReadOnlyChecked = true,  
                 ShowReadOnly = true  
             };  
-            string rs_path = "C:\\Users\\IUKHAN\\source\\repos\\Visual_Programming\\Resources\\";
             if(openFileDialog1.ShowDialog() == true)
             {
- //           System.IO.File.Copy(openFileDialog1.FileName,rs_path+"asd.jpeg");
-            BitmapImage bi3 = new BitmapImage();
-            bi3.BeginInit();
-            bi3.UriSource = new Uri(rs_path+"asd.jpeg", UriKind.Relative);
-            bi3.EndInit();
-            image_frame.Stretch = Stretch.Fill;            
-            image_frame.Source = bi3;
+                
             }
 
         }
