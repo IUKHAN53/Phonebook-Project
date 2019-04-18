@@ -24,38 +24,10 @@ namespace Assignment_2
             InitializeComponent();
             //contacts c = new contacts("IU","Khan","03013441991");
 
-            contacts obj = new contacts();
 
-            obj.Add_contact(new contacts() {
-                f_name = "Suhaib",
-                phone = "031245678"
-            });
-            obj.Add_contact(new contacts()
-            {
-                f_name = "Suhaib",
-                phone = "031245678"
-            });
-            obj.Add_contact(new contacts()
-            {
-                f_name = "Suhaib",
-                phone = "031245678"
-            });
-            obj.Add_contact(new contacts()
-            {
-                f_name = "Suhaib",
-                phone = "031245678"
-            });
-            obj.Add_contact(new contacts()
-            {
-                f_name = "Suhaib",
-                phone = "031245678"
-            });
-            obj.Add_contact(new contacts()
-            {
-                f_name = "Suhaib",
-                phone = "031245678"
-            });
-            this.contacts_list.ItemsSource = obj.cList;
+            
+            
+            this.contacts_list.ItemsSource = contacts.cList;
             
         }
         //add contact button
@@ -68,6 +40,11 @@ namespace Assignment_2
         }
         //search button
         private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Contacts_list_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }

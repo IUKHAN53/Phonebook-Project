@@ -21,6 +21,7 @@ namespace Assignment_2
     /// </summary>
     public partial class newContact : Window
     {
+        string path;
         public newContact()
         {
             InitializeComponent();
@@ -35,20 +36,25 @@ namespace Assignment_2
             string comp = comp_box.Text;
             string job1 = job_box.Text;
             string adress = adrs_box.Text;
+            
 
-
-            contacts obj = new contacts();
-            obj.Add_contact(new contacts()
+            
+            contacts.Add_contact(new contacts()
             {
                 f_name = firstName,
                 l_name = lastName,
                 phone = phoneNum,
-                photo = null,
+                photo = path,
                 company = comp,
                 job = job1,
                 email = email1,
                 address = adress
             });
+
+
+            this.Hide();
+            PhoneBook obj = new PhoneBook();
+            obj.Show();
         }
 
         private void Upload_btn_Click(object sender, RoutedEventArgs e)
@@ -71,7 +77,7 @@ namespace Assignment_2
             };  
             if(openFileDialog1.ShowDialog() == true)
             {
-                
+                path = openFileDialog1.FileName;
             }
 
         }
