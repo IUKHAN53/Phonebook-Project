@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,16 +20,11 @@ namespace Assignment_2
     /// </summary>
     public partial class PhoneBook : Window
     {
+        public List<contacts> p = new List<contacts>(); 
         public PhoneBook()
         {
             InitializeComponent();
-            //contacts c = new contacts("IU","Khan","03013441991");
-
-
-            
-            
             this.contacts_list.ItemsSource = contacts.cList;
-            
         }
         //add contact button
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -38,15 +34,42 @@ namespace Assignment_2
             this.Hide();
 
         }
-        //search button
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Contacts_list_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
 
-        private void Contacts_list_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void edit_btn(object sender, RoutedEventArgs e)
         {
+            if (editbtn.Content.Equals("Edit Details"))
+            {
+                fNameBox.IsEnabled = true;
+                lNameBox.IsEnabled = true;
+                adrsBox1.IsEnabled = true;
+                compBox.IsEnabled = true;
+                JobBox.IsEnabled = true;
+                PhoneBox.IsEnabled = true;
+                EmailBox.IsEnabled = true;
+                editbtn.Content = "Confirm";
+            }
+            else if (editbtn.Content.Equals("Confirm"))
+            {
+                fNameBox.IsEnabled = false;
+                lNameBox.IsEnabled = false;
+                adrsBox1.IsEnabled = false;
+                compBox.IsEnabled = false;
+                JobBox.IsEnabled = false;
+                PhoneBox.IsEnabled = false;
+                EmailBox.IsEnabled = false;
+                editbtn.Content = "Edit Details";
+            }
 
+        }
+
+        private void do_search(object sender, TextChangedEventArgs e)
+        {
+           string inp = search.Text;
+            //TO DO
         }
     }
 }

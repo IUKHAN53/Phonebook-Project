@@ -10,6 +10,7 @@ namespace Assignment_2
     public class contacts
     {
         public string f_name { get; set; }
+        public string fullname { get; set; }
         public string l_name { get; set; }
         public string phone { get; set; }
         public string photo { get; set; }
@@ -30,6 +31,16 @@ namespace Assignment_2
                 return false;
             }
             return true;
+        }
+        public contacts this[string x]
+        {
+            get
+            {
+                return cList.Find(contacts => contacts.fullname.StartsWith(x));
+            }
+            set
+            {
+            }
         }
     }
 }

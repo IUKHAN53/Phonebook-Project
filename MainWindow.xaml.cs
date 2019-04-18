@@ -26,7 +26,7 @@ namespace Assignment_2
             if (!(UserNam.Equals("") && Password.Equals("")))
             {
                 MessageBox.Show(Password, UserNam, MessageBoxButton.OK, MessageBoxImage.Error);
-                signup_lbl.Content = "login";
+                signup_lbl.Content = "Login";
                 rpass_lbl.Visibility = Visibility.Hidden;
                 rpass.Visibility = Visibility.Hidden;
                 signup_btn1.Content = "Login";
@@ -74,6 +74,11 @@ namespace Assignment_2
         }
 
         private void UserName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Lgin_btn_Click(object sender, RoutedEventArgs e)
         {
 
         }

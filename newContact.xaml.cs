@@ -21,7 +21,7 @@ namespace Assignment_2
     /// </summary>
     public partial class newContact : Window
     {
-        string path;
+        
         public newContact()
         {
             InitializeComponent();
@@ -36,13 +36,14 @@ namespace Assignment_2
             string comp = comp_box.Text;
             string job1 = job_box.Text;
             string adress = adrs_box.Text;
-            
+            string path = photo_box.Text;
 
-            
+
             contacts.Add_contact(new contacts()
             {
                 f_name = firstName,
                 l_name = lastName,
+                fullname = (firstName + lastName),
                 phone = phoneNum,
                 photo = path,
                 company = comp,
@@ -50,7 +51,7 @@ namespace Assignment_2
                 email = email1,
                 address = adress
             });
-
+            //"{Binding phone, Mode=TwoWay}"
 
             this.Hide();
             PhoneBook obj = new PhoneBook();
@@ -71,13 +72,12 @@ namespace Assignment_2
                 Filter = "Images |(*.BMP;*.JPG;*.GIF,*.PNG,*.TIFF)",  
                 FilterIndex = 2,  
                 RestoreDirectory = true,  
-  
                 ReadOnlyChecked = true,  
                 ShowReadOnly = true  
             };  
             if(openFileDialog1.ShowDialog() == true)
             {
-                path = openFileDialog1.FileName;
+                photo_box.Text = openFileDialog1.FileName;
             }
 
         }

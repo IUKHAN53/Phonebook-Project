@@ -5,32 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Assignment_2"
         mc:Ignorable="d"
-        Title="newContact" Height="494.681" Width="479.173">
-    <Grid Margin="0,0,2,0">
+        Title="newContact" Height="494.681" Width="436.173">
+    <Grid HorizontalAlignment="Left" Width="429">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FFC9C9C9" Offset="0"/>
-                <GradientStop Color="#FF1D0101" Offset="1"/>
+                <GradientStop Color="#FFBFBFBF" Offset="0"/>
+                <GradientStop Color="Black" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <TextBox x:Name="fname_box" HorizontalAlignment="Left" Height="37" Margin="137,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164"  Background="{x:Null}" BorderBrush="Black" FontSize="20"/>
-        <Label Content="First Name" HorizontalAlignment="Left" Margin="46,69,0,0" VerticalAlignment="Top" Width="97" FontSize="14" Height="38" Foreground="White"/>
-        <TextBox x:Name="lname_box" HorizontalAlignment="Left" Height="37" Margin="137,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164"  Background="{x:Null}" BorderBrush="Black" FontSize="20"/>
-        <Label Content="Last Name" HorizontalAlignment="Left" Margin="46,114,0,0" VerticalAlignment="Top" Width="97" FontSize="14" Height="38" Foreground="White"/>
-        <TextBox x:Name="phone_box" HorizontalAlignment="Left" Height="37" Margin="137,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" Background="{x:Null}" BorderBrush="Black" FontSize="20"/>
-        <Label Content="Phone" HorizontalAlignment="Left" Margin="46,159,0,0" VerticalAlignment="Top" Width="97" FontSize="14" Height="38" Foreground="White"/>
-        <TextBox x:Name="email_box" HorizontalAlignment="Left" Height="36" Margin="137,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" Background="{x:Null}" BorderBrush="Black" FontSize="20"/>
-        <Label Content="Email" HorizontalAlignment="Left" Margin="46,203,0,0" VerticalAlignment="Top" Width="97" FontSize="14" Height="38" Foreground="White"/>
-        <TextBox x:Name="comp_box" HorizontalAlignment="Left" Height="37" Margin="137,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164"  Background="{x:Null}" BorderBrush="Black" FontSize="20"/>
-        <Label Content="Company" HorizontalAlignment="Left" Margin="46,247,0,0" VerticalAlignment="Top" Width="81" FontSize="14" Height="38" Foreground="White"/>
-        <TextBox x:Name="adrs_box" HorizontalAlignment="Left" Height="37" Margin="137,334,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164"  Background="{x:Null}" BorderBrush="Black" FontSize="20"/>
-        <Label Content="Address" HorizontalAlignment="Left" Margin="46,336,0,0" VerticalAlignment="Top" Width="86" FontSize="14" Height="37" Foreground="White"/>
-        <Image x:Name="image_frame" HorizontalAlignment="Left" Height="143" VerticalAlignment="Top" Width="142" Margin="317,67,0,0" Source="{Binding path,Mode=OneWay}"/>
-        <Button x:Name="upload_btn" Content="Upload Image" HorizontalAlignment="Left" VerticalAlignment="Top" Width="142" Margin="317,215,0,0" Height="24" Background="{x:Null}" BorderBrush="#FF130101" Foreground="White" Click="Upload_btn_Click"/>
-        <Label Content="Add New Contact" Margin="129,20,128,0" VerticalAlignment="Top" FontSize="24" Height="42" Foreground="White" FontWeight="Bold"/>
-        <Button Content="Add Contact" Margin="151,384,151,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="#FFC3C3C3" Foreground="White" Click="Button_Click_1" Height="57" FontSize="24" IsDefault="True"/>
-        <TextBox x:Name="job_box" HorizontalAlignment="Left" Height="37" Margin="137,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164"  Background="{x:Null}" BorderBrush="Black" FontSize="20"/>
-        <Label Content="Designation" HorizontalAlignment="Left" Margin="46,292,0,0" VerticalAlignment="Top" Width="86" FontSize="14" Height="38" Foreground="White"/>
+        <TextBox x:Name="fname_box" HorizontalAlignment="Left" Height="37" Margin="136,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="226"  Background="{x:Null}" BorderBrush="Black" FontSize="20"/>
+        <Label Content="First Name" HorizontalAlignment="Left" Margin="29,50,0,0" VerticalAlignment="Top" Width="102" FontSize="14" Height="38" Foreground="White"/>
+        <TextBox x:Name="lname_box" HorizontalAlignment="Left" Height="37" Margin="136,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="226"  Background="{x:Null}" BorderBrush="Black" FontSize="20"/>
+        <Label Content="Last Name" HorizontalAlignment="Left" Margin="29,95,0,0" VerticalAlignment="Top" Width="102" FontSize="14" Height="38" Foreground="White"/>
+        <TextBox x:Name="phone_box" HorizontalAlignment="Left" Height="37" Margin="136,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="226" Background="{x:Null}" BorderBrush="Black" FontSize="20"/>
+        <Label Content="Phone" HorizontalAlignment="Left" Margin="29,140,0,0" VerticalAlignment="Top" Width="102" FontSize="14" Height="38" Foreground="White"/>
+        <TextBox x:Name="email_box" HorizontalAlignment="Left" Height="36" Margin="136,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="226" Background="{x:Null}" BorderBrush="Black" FontSize="20"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="29,184,0,0" VerticalAlignment="Top" Width="102" FontSize="14" Height="38" Foreground="White"/>
+        <TextBox x:Name="comp_box" HorizontalAlignment="Left" Height="37" Margin="136,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="226"  Background="{x:Null}" BorderBrush="Black" FontSize="20"/>
+        <Label Content="Company" HorizontalAlignment="Left" Margin="29,271,0,0" VerticalAlignment="Top" Width="85" FontSize="14" Height="38" Foreground="White"/>
+        <TextBox x:Name="job_box" HorizontalAlignment="Left" Height="37" Margin="136,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="226"  Background="{x:Null}" BorderBrush="Black" FontSize="20"/>
+        <Label Content="Address" HorizontalAlignment="Left" Margin="29,360,0,0" VerticalAlignment="Top" Width="90" FontSize="14" Height="37" Foreground="White"/>
+        <Label Content="Add New Contact" Margin="112,6,111,0" VerticalAlignment="Top" FontSize="24" Height="42" Foreground="White" FontWeight="Bold"/>
+        <TextBox x:Name="adrs_box" HorizontalAlignment="Left" Height="37" Margin="136,360,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="226"  Background="{x:Null}" BorderBrush="Black" FontSize="20"/>
+        <Button x:Name="upload_btn" Content="Upload" HorizontalAlignment="Left" VerticalAlignment="Top" Width="46" Margin="367,224,0,0" Height="36" Background="{x:Null}" BorderBrush="#FF130101" Foreground="White" Click="Upload_btn_Click" RenderTransformOrigin="-0.043,1.472"/>
+        <Label Content="Designation" HorizontalAlignment="Left" Margin="29,316,0,0" VerticalAlignment="Top" Width="90" FontSize="14" Height="38" Foreground="White"/>
+        <TextBox x:Name="photo_box" HorizontalAlignment="Left" Height="36" Margin="136,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="226" Background="{x:Null}" BorderBrush="Black" FontSize="14" IsEnabled="False"/>
+        <Button Content="Add Contact" Margin="135,401,135,9" Background="{x:Null}" BorderBrush="#FFC3C3C3" Foreground="White" Click="Button_Click_1" FontSize="24" IsDefault="True"/>
+        <Label Content="Photo" HorizontalAlignment="Left" Margin="29,226,0,0" VerticalAlignment="Top" Width="102" FontSize="14" Height="38" Foreground="White"/>
 
     </Grid>
 </Window>
