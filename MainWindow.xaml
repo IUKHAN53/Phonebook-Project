@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Assignment_2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="528.474" Width="408.856">
+        Title="MainWindow" Height="528" Width="409">
     <Grid Margin="0,-2,-4,-2">
         <Grid.RowDefinitions>
             <RowDefinition Height="229*"/>
@@ -17,15 +17,13 @@
                 <GradientStop Color="#FFD4D4D4"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button x:Name="signup_btn1" Content="Signup" Margin="156,115,157,0" VerticalAlignment="Top" Height="45" Background="{x:Null}" BorderBrush="#FF2B1A1A" FontSize="24" FontWeight="Bold" Click="Login_btn_Click" Foreground="#FFF9F9F9" Grid.Row="1"/>
-        <TextBox x:Name="UserName" Height="39" Margin="177,137,37,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" BorderBrush="Black" Background="{x:Null}" TextChanged="UserName_TextChanged"/>
-        <Label x:Name="signup_lbl" Content="SignUp" Margin="141,34,141,0" VerticalAlignment="Top" RenderTransformOrigin="0.563,3.332" Height="66" Background="{x:Null}" FontSize="36" FontFamily="Segoe UI Emoji" Foreground="White"/>
-        <PasswordBox x:Name="pass" Margin="177,205,37,0" VerticalAlignment="Top" Height="41" BorderBrush="#FF0E0C0C" FontSize="24" PasswordChar="*" Background="{x:Null}" Grid.RowSpan="2"/>
-        <Label x:Name="act_lbl" Content="Have an Account?" Margin="106,178,193,68" Foreground="White" Grid.Row="1"/>
-        <Button x:Name="lgin_btn" Content="Login" Margin="212,181,118,71" Background="{x:Null}" Foreground="#FF90EFFF" BorderBrush="{x:Null}" Grid.Row="1" Click="Lgin_btn_Click"/>
-        <PasswordBox x:Name="rpass" Margin="177,46,37,0" VerticalAlignment="Top" Height="41" BorderBrush="#FF080606" FontSize="24" Background="{x:Null}" Grid.Row="1"/>
-        <Label Content="UserName" HorizontalAlignment="Left" Margin="52,137,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.563,3.332" Height="39" Width="94" Background="{x:Null}" FontFamily="Segoe UI Emoji" FontSize="18" Foreground="White"/>
-        <Label Content="Password" HorizontalAlignment="Left" Margin="52,207,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.563,3.332" Height="39" Width="94" Background="{x:Null}" FontFamily="Segoe UI Emoji" FontSize="18" Foreground="White" Grid.RowSpan="2"/>
-        <Label x:Name="rpass_lbl" Content="ReEnter Pass" HorizontalAlignment="Left" Margin="35,48,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.563,3.332" Height="39" Width="111" Background="{x:Null}" FontFamily="Segoe UI Emoji" FontSize="18" Foreground="#FFF9EAEA" Grid.Row="1"/>
+        <Button x:Name="signup_btn1" Content="Signup" Margin="156,132,157,0" VerticalAlignment="Top" Height="45" Background="{x:Null}" BorderBrush="#FF2B1A1A" FontSize="24" FontWeight="Bold" Click="Login_btn_Click" Foreground="#FFF9F9F9" Grid.Row="1"/>
+        <TextBox x:Name="UserName" Height="39" Margin="177,159,37,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" BorderBrush="Black" Background="{x:Null}"/>
+        <Label x:Name="signup_lbl" Content="SignUp" Margin="141,57,141,0" VerticalAlignment="Top" RenderTransformOrigin="0.563,3.332" Height="66" Background="{x:Null}" FontSize="36" FontFamily="Segoe UI Emoji" Foreground="White"/>
+        <PasswordBox x:Name="pass" Margin="177,227,37,0" VerticalAlignment="Top" Height="41" BorderBrush="#FF0E0C0C" FontSize="24" PasswordChar="*" Background="{x:Null}" Grid.RowSpan="2"/>
+        <PasswordBox x:Name="rpass" Margin="177,68,37,0" VerticalAlignment="Top" Height="41" BorderBrush="#FF080606" FontSize="24" Background="{x:Null}" Grid.Row="1"/>
+        <Label Content="UserName" HorizontalAlignment="Left" Margin="52,159,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.563,3.332" Height="39" Width="94" Background="{x:Null}" FontFamily="Segoe UI Emoji" FontSize="18" Foreground="White"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="52,0,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.563,3.332" Height="39" Width="94" Background="{x:Null}" FontFamily="Segoe UI Emoji" FontSize="18" Foreground="White" Grid.Row="1"/>
+        <Label x:Name="rpass_lbl" Content="ReEnter Pass" HorizontalAlignment="Left" Margin="35,70,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.563,3.332" Height="39" Width="111" Background="{x:Null}" FontFamily="Segoe UI Emoji" FontSize="18" Foreground="#FFF9EAEA" Grid.Row="1"/>
     </Grid>
 </Window>

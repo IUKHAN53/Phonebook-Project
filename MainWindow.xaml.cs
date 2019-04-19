@@ -30,8 +30,6 @@ namespace Assignment_2
                 rpass_lbl.Visibility = Visibility.Hidden;
                 rpass.Visibility = Visibility.Hidden;
                 signup_btn1.Content = "Login";
-                act_lbl.Visibility = Visibility.Hidden;
-                lgin_btn.Visibility = Visibility.Hidden;
             }
         }
             
@@ -71,16 +69,6 @@ namespace Assignment_2
 
             }
            
-        }
-
-        private void UserName_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void Lgin_btn_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
