@@ -68,8 +68,10 @@ namespace Assignment_2
 
         private void do_search(object sender, TextChangedEventArgs e)
         {
-           string inp = search.Text;
-            //TO DO
+            contacts c = new contacts();
+            string inp = search.Text;
+            contacts cn = c[inp];
+            contacts_list.SelectedItem = cn;
         }
     }
 }
