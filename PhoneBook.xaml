@@ -25,7 +25,7 @@
             </LinearGradientBrush>
         </Grid.Background>
         <TextBox x:Name="search" HorizontalAlignment="Left" Height="23" Margin="8,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="299" Background="{x:Null}" Foreground="#FF131212" BorderBrush="#FF060606" Grid.ColumnSpan="2" TextChanged="do_search"/>
-        <ListBox x:Name="contacts_list" Margin="10,33,10,30" Foreground="#FF362929" Background="{x:Null}" BorderBrush="{x:Null}" ItemTemplate="{DynamicResource cTemplate}" SelectionChanged="Contacts_list_SelectionChanged" Grid.ColumnSpan="2">
+        <ListBox x:Name="contacts_list" Margin="10,33,10,30" Foreground="#FF362929" Background="{x:Null}" BorderBrush="{x:Null}" ItemTemplate="{DynamicResource cTemplate}" Grid.ColumnSpan="2">
             <ListBox.Resources>
                 <DataTemplate x:Key="cTemplate">
                     <Grid Width="209" Height="57" Background="{x:Null}" ToolTip="{Binding f_name}">
@@ -42,14 +42,16 @@
         <Label Content="Job :" HorizontalAlignment="Left" Margin="300,360,-53,0" VerticalAlignment="Top" Width="47" FontSize="14" Height="34" Foreground="White" Grid.Column="1"/>
         <Label Content="Company :" HorizontalAlignment="Left" Margin="297,413,-83,0" VerticalAlignment="Top" Width="80" FontSize="14" Height="35" Foreground="White" RenderTransformOrigin="0.5,0.5" Grid.Column="1"/>
         <Label Content="Address :" HorizontalAlignment="Left" Margin="300,465,-83,0" VerticalAlignment="Top" Width="77" FontSize="14" Height="35" Foreground="White" RenderTransformOrigin="0.5,0.5" Grid.Column="1"/>
-        <Image x:Name="image_frame" HorizontalAlignment="Left" Width="329" Margin="297,2,-332,389" Source="{Binding photo, Mode=TwoWay}" RenderTransformOrigin="0.495,0.5" Grid.Column="1"/>
-        <TextBox x:Name="fNameBox" Text="{Binding f_name, Mode=TwoWay}" Grid.Column="1" Height="38" Margin="304,194,-166,0" TextWrapping="Wrap" VerticalAlignment="Top" BorderBrush="White" Background="{x:Null}" Foreground="White" FontSize="20" IsEnabled="False"/>
-        <TextBox x:Name="lNameBox" Text="{Binding l_name, Mode=TwoWay}" Grid.Column="1" Height="38" Margin="460,194,-322,0" TextWrapping="Wrap" VerticalAlignment="Top" BorderBrush="White" Background="{x:Null}" Foreground="White" FontSize="20" IsEnabled="False"/>
+        <Image x:Name="image_frame" HorizontalAlignment="Left" Width="270" Margin="327,43,-303,370" Source="{Binding photo, Mode=TwoWay}" RenderTransformOrigin="0.495,0.5" Grid.Column="1" Stretch="UniformToFill"/>
+        <TextBox x:Name="fNameBox" Text="{Binding f_name, Mode=TwoWay}" Grid.Column="1" Height="38" Margin="305,202,-167,0" TextWrapping="Wrap" VerticalAlignment="Top" BorderBrush="White" Background="{x:Null}" Foreground="White" FontSize="20" IsEnabled="False"/>
+        <TextBox x:Name="lNameBox" Text="{Binding l_name, Mode=TwoWay}" Grid.Column="1" Height="38" Margin="461,202,-323,0" TextWrapping="Wrap" VerticalAlignment="Top" BorderBrush="White" Background="{x:Null}" Foreground="White" FontSize="20" IsEnabled="False"/>
         <TextBox x:Name="EmailBox" Text="{Binding email, Mode=TwoWay}" Grid.Column="1" HorizontalAlignment="Left" Height="38" Margin="382,252,-323,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" BorderBrush="White" Background="{x:Null}" Foreground="White" FontSize="20" IsEnabled="False"/>
         <TextBox x:Name="PhoneBox" Text="{Binding phone, Mode=TwoWay}" Grid.Column="1" HorizontalAlignment="Left" Height="38" Margin="382,306,-323,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" BorderBrush="White" Background="{x:Null}" Foreground="White" FontSize="20" IsEnabled="False"/>
         <TextBox x:Name="JobBox" Text="{Binding job, Mode=TwoWay}" Grid.Column="1" HorizontalAlignment="Left" Height="38" Margin="382,360,-323,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" BorderBrush="White" Background="{x:Null}" Foreground="White" FontSize="20" IsEnabled="False"/>
         <TextBox x:Name="compBox" Text="{Binding company, Mode=TwoWay}" Grid.Column="1" HorizontalAlignment="Left" Height="38" Margin="382,410,-323,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" BorderBrush="White" Background="{x:Null}" Foreground="White" FontSize="20" IsEnabled="False"/>
         <TextBox x:Name="adrsBox1" Text="{Binding address, Mode=TwoWay}" Grid.Column="1" HorizontalAlignment="Left" Height="38" Margin="382,462,-323,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" BorderBrush="White" Background="{x:Null}" Foreground="White" FontSize="20" IsEnabled="False"/>
         <Button x:Name="editbtn" Content="Edit Details" Margin="395,519,-230,13" Background="{x:Null}" BorderBrush="#FF6E6E6E" Foreground="#FF292828" Click="edit_btn" Grid.Column="1"/>
+        <Button x:Name="close" Content="X" Margin="588,3,-324,524" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontWeight="Bold" FontSize="24" Click="Close_Click" Grid.Column="1"/>
+        <Button x:Name="min" Content="-" Margin="557,3,-293,524" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontWeight="Bold" FontSize="24" Click="Min_Click" Grid.Column="1"/>
     </Grid>
 </Window>

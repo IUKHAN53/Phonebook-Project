@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Assignment_2"
         mc:Ignorable="d"
         Title="MainWindow" Height="528" Width="409">
-    <Grid Margin="0,-2,-4,-2">
+    <Grid Margin="0,0,-4,-2">
         <Grid.RowDefinitions>
             <RowDefinition Height="229*"/>
             <RowDefinition Height="272*"/>
@@ -26,5 +26,7 @@
         <Label Content="Password" HorizontalAlignment="Left" Margin="52,0,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.563,3.332" Height="39" Width="94" Background="{x:Null}" FontFamily="Segoe UI Emoji" FontSize="18" Foreground="White" Grid.Row="1"/>
         <Label x:Name="rpass_lbl" Content="ReEnter Pass" HorizontalAlignment="Left" Margin="35,70,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.563,3.332" Height="39" Width="111" Background="{x:Null}" FontFamily="Segoe UI Emoji" FontSize="18" Foreground="#FFF9EAEA" Grid.Row="1"/>
         <Button x:Name="rst_btn" Content="Reset" Margin="339,234,7,7" Background="{x:Null}" BorderBrush="White" FontSize="16" Click="rst_clicked" Foreground="#FF0017FF" Grid.Row="1"/>
+        <Button x:Name="close" Content="X" Margin="365,7,10,181" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontWeight="Bold" FontSize="24" Click="Close_Click"/>
+        <Button x:Name="min" Content="-" Margin="334,7,41,181" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontWeight="Bold" FontSize="24" Click="Min_Click"/>
     </Grid>
 </Window>

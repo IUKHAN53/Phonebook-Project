@@ -9,6 +9,7 @@ namespace Assignment_2
 {
     public class contacts
     {
+        //all the variables for contact details and their properties
         public string f_name { get; set; }
         public string fullname { get; set; }
         public string l_name { get; set; }
@@ -18,8 +19,11 @@ namespace Assignment_2
         public string job { get; set; }
         public string email { get; set; }
         public string address { get; set; }
+
+        //a list to contain all the objects made of contacts
         public static List<contacts> cList = new List<contacts>();
         public contacts() { }
+        //adding a contact to the list
         public static bool Add_contact(contacts c)
         {
             try
@@ -32,6 +36,7 @@ namespace Assignment_2
             }
             return true;
         }
+        // indexer to show the contacts matching characters passed
         public contacts this[string x]
         {
             get

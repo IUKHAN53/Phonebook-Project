@@ -24,11 +24,15 @@ namespace Assignment_2
         
         public newContact()
         {
+            //removing borders and centering window
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+            WindowStyle = WindowStyle.None;
             InitializeComponent();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            //getting all values from text boxes
             string firstName = fname_box.Text;
             string lastName = lname_box.Text;
             string phoneNum = phone_box.Text;
@@ -36,9 +40,9 @@ namespace Assignment_2
             string comp = comp_box.Text;
             string job1 = job_box.Text;
             string adress = adrs_box.Text;
-            string path = photo_box.Text;
+            string path = pathLbl.Content.ToString();
 
-
+            //passing all values to new contact inside list inside contacts class
             contacts.Add_contact(new contacts()
             {
                 f_name = firstName,
@@ -51,8 +55,7 @@ namespace Assignment_2
                 email = email1,
                 address = adress
             });
-            //"{Binding phone, Mode=TwoWay}"
-
+            //hiding contact window and showing phonebook
             this.Hide();
             PhoneBook obj = new PhoneBook();
             obj.Show();
@@ -60,15 +63,18 @@ namespace Assignment_2
 
         private void Upload_btn_Click(object sender, RoutedEventArgs e)
         {
+            //it will open the dialog box for file selection for the contact picture
            OpenFileDialog openFileDialog1 = new OpenFileDialog  
             {  
+               //initial directory for selections
                 InitialDirectory = @"C:\",  
                 Title = "Select an image",  
-  
+                //checking if file exists and path
                 CheckFileExists = true,  
                 CheckPathExists = true,  
-  
+                //default extension to choose for
                 DefaultExt = "jpeg",  
+                //all filters applicable
                 Filter = "Images |(*.BMP;*.JPG;*.GIF,*.PNG,*.TIFF)",  
                 FilterIndex = 2,  
                 RestoreDirectory = true,  
@@ -77,9 +83,20 @@ namespace Assignment_2
             };  
             if(openFileDialog1.ShowDialog() == true)
             {
-                photo_box.Text = openFileDialog1.FileName;
+                //save the file path to label for references
+                pathLbl.Content = openFileDialog1.FileName;
             }
 
+        }
+        //minimizing and cloasing the window
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
+
+        private void Min_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
         }
     }
 }
