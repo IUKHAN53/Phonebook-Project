@@ -17,7 +17,6 @@ namespace Assignment_2
 {
     public partial class MainWindow : Window
     {
-        //this.showWindow = 
         public MainWindow()
         {
             InitializeComponent();
@@ -25,12 +24,13 @@ namespace Assignment_2
             string Password = Properties.Settings.Default.Password;
             if (!(UserNam.Equals("") && Password.Equals("")))
             {
-                MessageBox.Show(Password, UserNam, MessageBoxButton.OK, MessageBoxImage.Error);
                 signup_lbl.Content = "Login";
                 rpass_lbl.Visibility = Visibility.Hidden;
                 rpass.Visibility = Visibility.Hidden;
                 signup_btn1.Content = "Login";
             }
+            else
+                rst_btn.Visibility = Visibility.Hidden;
         }
             
         private void Login_btn_Click(object sender, RoutedEventArgs e)
@@ -59,8 +59,9 @@ namespace Assignment_2
                     Properties.Settings.Default.UserName = u_name;
                     Properties.Settings.Default.Password = password;
                     Properties.Settings.Default.Save();
-                    Console.WriteLine(Properties.Settings.Default.UserName);
-                    Console.WriteLine(Properties.Settings.Default.Password);
+                    this.Hide();
+                    MainWindow mw = new MainWindow();
+                    mw.Show();
                 }
                 else
                 {
@@ -69,6 +70,17 @@ namespace Assignment_2
 
             }
            
+        }
+
+        private void rst_clicked(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.UserName = "";
+            Properties.Settings.Default.Password = "";
+            Properties.Settings.Default.Save();
+            this.Hide();
+            MainWindow mw = new MainWindow();
+            mw.Show();
+
         }
     }
 }
